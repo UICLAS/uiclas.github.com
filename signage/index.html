@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Schlemiel, Schlemazel, Digital Signage Incorporated!</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Mark Bennett">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h2>Schlemiel, Schlemazel,<br>Digital Signage Incorporated!</h2>
+          <p>How the CLAS Web Services Group at the University of Iowa developed a digital signage solution using Drupal.</p>
+          <p><small>Created by the <a href="http://clas.uiowa.edu">CLAS Web Services Group</a></small></p>
+          <a href="http://2015.highedweb.org/"><h3>Session: AIM9</h3></a>
+          <p>Press the SPACEBAR to advance through the slides...</p>
+        </section>
+
+        <section>
+          <p><img src="img/intro_door.jpg" alt="Mark and Mark at the entrance to the Web Services Group office" style="height:600px;"></p>
+        </section>
+
+        <section>
+          <h3>Why digital signage?</h2>
+          <h3 class="fragment">Why we tried Drupal...</h3>
+          <h3 class="fragment">What we came up with...</h3>
+          <h3 class="fragment">Where it's worked...</h3>
+          <h3 class="fragment">What are we doing now?</h3>
+        </section>
+
+        <section>
+          <section>
+            <h2>Why digital signage?</h2>
+            <p>Save time and money vs. printed signage</p>
+            <p>Dynamic vs. static content</p>
+            <p>Timely (even immediate) updates to content</p>
+            <p>Centralized control to manage multiple locations</p>
+            <p>Modern look (graphics and animations)</p>
+
+            <aside class="notes">
+              Imagine we have an event in the Biology Department that we want to draw attention to. Rather than printing out dozens of flyers
+              and sending out mass emails drawing attention to the event, we can produce a digital flyer and display that on numerous displays
+              around campus. We've save time, money, trees, etc over the previous alternative.
+            </aside>
+          </section>
+          <section>
+            <h3>Printed Signage</h3>
+            <small>Mass produced, shipped from a central location, requires an employee to update the local sign/menu/board.</small>
+            <p><img src="img/mcdonalds70.jpg" alt="Example of printed menu signage found in a McDonalds fast food restaurant from the 1970s"></p>
+          </section>
+          <section>
+            <h3>Digital Menu Signage</h3>
+            <small>Created by central marketing, pushed out to remote locations, updated automatically.</small>
+            <p><img src="img/mcdonalds_digitalmenu.jpg" alt="Example of new digital menus found in a McDonalds fast food restaurant"></p>
+          </section>
+          <section>
+            <h3>Information and Wayfinding</h3>
+            <p><img src="img/sanfran_airport_digital_signage.png" alt="Example of the interactive digital signage found in the San Francisco International Airport"></p>
+          </section>
+          <section>
+            <h3>Emergency Alerts</h3>
+            <p><img src="img/amber_alert.jpg" alt="Example of dynamic emergency alerts found on an interstate billboard"></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Why we tried Drupal...</h2>
+            <p>High cost and increasing frustration with current non-Drupal options</p>
+
+            <aside class="notes">
+              In the several years, we have been approached by numerous end users and content managers on campus who have expressed frustration and concern with their Visix and/or FourWinds displays. It was difficult for them to manage their content (either adding new content, updating existing content, or removing content). Some users even turned off their displays. The price was too much for what some users felt they were receiving / producing.
+            </aside>
+          </section>
+          <section>
+            <img src="img/visix_logo.png" alt="Visix logo">
+            <p>AxisTV License - $1200 one-time fee per display</p>
+            <p>Service Agreement - 11% per year</p>
+            <p class="highlight-red"><small>(Poorly designed interface; Unintuitive navigation)</small></p>
+            <p><a href="http://www.visix.com/" target="_blank">visix.com</a></p>
+          </section>
+          <section>
+            <img src="img/fourwinds_logo.png" alt="Four Winds Interactive logo">
+            <p>Building Package License - $10000 enterprise fee per unit</p>
+            <p>Service Agreement - 17% per year</p>
+            <p><small>(Easier to use interface; Higher cost per unit)</small></p>
+            <p><a href="http://www.fourwindsinteractive.com/" target="_blank">fourwindsinteractive.com</a></p>
+          </section>
+          <section>
+            <img src="img/scala_logo.png" alt="Scala logo">
+            <p>Local Hosting License - $950 one-time fee</p>
+            <p>Media Player Fee - $725 per year per display</p>
+            <p>Service Agreement - 20% of <em>total</em> software cost per year</p>
+            <p>*Cloud Hosting Option - $40 monthly fee per player</p>
+            <p><small>(High cost per unit; High hardware costs)</small></p>
+            <p><a href="http://scala.com/" target="_blank">scala.com</a></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Why we tried Drupal...</h2>
+            <p>Massive redesign project for all CLAS department websites</p>
+          </section>
+          <section>
+            <h3>The Dean's Redesign Project</h3>
+            <p>45 department websites and 20 center websites</p>
+            <p>Creation of a consistent look and feel throughout the College</p>
+            <p>Common header for familiarity and ease-of-use across websites</p>
+            <p>Utilize the University colors (Black and Gold)</p>
+            <p>Capture attention faster and spark more interest</p>
+          </section>
+          <section>
+            <h3>Should we use Drupal?</h3>
+            <p>Drupal was free and was already gaining momentum on campus</p>
+            <p>Easier for us to use the same interface for both projects</p>
+            <p>Nearly 32,000 contributed modules available on <a href="http://www.drupal.org/" target="_blank">drupal.org</a></p>
+            <p>We could create our own custom modules to go above and beyond</p>
+            <p>Online resources were helpful for finding solutions to problems</p>
+          </section>
+          <section>
+            <p><img class="sign" src="img/music_screenshot.jpg" alt="Image of the University of Iowa's School of Music website"></p>
+            <p><a href="http://music.uiowa.edu/" target="_blank">music.uiowa.edu</a></p>
+          </section>
+          <section>
+            <p><img class="sign" src="img/history_screenshot.jpg" alt="Image of the University of Iowa's History Department website"></p>
+            <p><a href="http://clas.uiowa.edu/history/" target="_blank">clas.uiowa.edu/history</a></p>
+          </section>
+          <section>
+            <p><img class="sign" src="img/theatre_screenshot.jpg" alt="Image of the University of Iowa's Theatre Arts website"></p>
+            <p><a href="http://theatre.uiowa.edu/" target="_blank">theatre.uiowa.edu</a></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>What we came up with...</h2>
+            <p>Theme based on the new CLAS design and identity</p>
+
+            <aside class="notes">
+              We took the identity that we developed for the department websites and created a theme for the digital signs. Again, black and gold aren't exactly the easiest combination of colors to work with from a design perspective, but we believe we did a more than decent job. Utilize large, bold fonts to make clarity better from greater distances. Subtle grayscale changes to display separation of information, etc.
+            </aside>
+          </section>
+          <section>
+            <h3>Signage Theme</h3>
+            <p>Used the CLAS theme as inspiration for the digital signage theme</p>
+            <p>Utilizes the University colors (Black and Gold)</p>
+            <p>University and College logos to enforce identity</p>
+            <p>Large, bold fonts for better clarity from distance</p>
+          </section>
+          <section>
+            <p><img class="sign" src="img/digital_signage_apsd.jpg" alt="Snapshot of the Academic Programs and Student Development's digital signage"></p>
+            <p><a href="http://clas.uiowa.edu/signage/academic-programs-and-student-development" target="_blank">Academic Programs and Student Development</a></p>
+          </section>
+          <section>
+            <p><img class="sign" src="img/digital_signage_macbride.jpg" alt="Snapshot of the Macbride Hall's digital signage"></p>
+            <p><a href="http://clas.uiowa.edu/signage/macbride-hall" target="_blank">Macbride Hall</a></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>What we came up with...</h2>
+            <p>Responsive design for various display types</p>
+          </section>
+          <section>
+            <h3>Responsive Design</h3>
+            <p>Fluid Grid CSS Framework</p>
+            <p>One-, Two- and Three-column flexible layouts</p>
+            <p>Tablets, 720p, 1080p, and 4k displays</p>
+            <p>Landscape and Portrait Orientations</p>
+
+            <aside class="notes">
+              Since we have designed this strictly for digital signage, we created the theme to respond to tablets, 720p, 1080p and even 2160p (4K) displays.
+            </aside>
+          </section>
+          <section>
+            <h3>Flexible Layouts</h3>
+            <p><img src="img/layouts.jpg" alt="Available fluid layouts in the Drupal Digital Signage system"></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>What we came up with...</h2>
+            <p>Core and modules</p>
+          </section>
+          <section>
+            <h3>Drupal Core and modules</h3>
+            <p>Core</p>
+            <p>CAS</p>
+            <p>Chaos Tools</p>
+            <p>Date</p>
+            <p>Feeds</p>
+            <p>Flexslider</p>
+            <p>Organic Groups</p>
+            <p>Panelizer</p>
+            <p>Panels</p>
+            <p>Views</p>
+
+            <aside class="notes">
+              CAS allows us to utilize the university's authentication system for logins.
+
+              Feeds allows us to listen to the RSS feeds for news and events from the College and departments to auto-populate the news and events on the digital signs. Content managers can enter a news item or event in one location and numerous additional locations can display the item.
+
+              Organic Groups are the backbone of the digital signage. This allows us to create a group which has its own 'homepage'. The group 'homepage' becomes the digital sign for the group. For instance, we create a group called 'Chemistry'. The group homepage becomes http://clas.uiowa.edu/signs/chemistry. We then assign CAS users to the group as content managers where needed.
+
+              Panels and Views - These are pretty self-explanatory. Panels for drag and drop content management with the In-Place Editor (IPE) and Views for viewing content how we want.
+            </aside>
+          </section>
+          <section>
+            <h3>Independent Slideshows</h3>
+            <p>Content Managers can create up to three independent slideshows</p>
+            <p>Slideshow content can be scheduled and shared across groups</p>
+          </section>
+          <section>
+            <h3>Independent Slideshows</h3>
+            <p><img class="sign" src="img/digital_signage_3ss.jpg" alt="Example of three independent slideshows running on a digital sign"></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>What we came up with...</h2>
+            <p>Additional Scripts/Modules</p>
+          </section>
+          <section>
+            <h3>Additional Scripts/Modules</h3>
+            <p>Date/Time</p>
+            <p>Weather Forecast - <a href="http://www.wunderground.com" target="_blank">wunderground.com</a></p>
+            <p>BONGO (Bus On The Go) - <a href="http://ebongo.org" target="_blank">ebongo.org</a></p>
+            <p>Earthquake Data Map (USGS) - <a href="http://earthquake.usgs.gov/earthquakes/map/" target="_blank">USGS.gov</a></p>
+            <p>Scrolling News Marquee</p>
+            <p>Rotating Events</p>
+            <p>Facebook*</p>
+            <p>Twitter*</p>
+          </section>
+          <section>
+            <h3>Weather Forecast</h3>
+            <p>Create a shell script (<em>forecast.sh</em>) to pull the forecast from Weather Underground<sup>&reg;</sup> and create a local <em>forecast.json</em> file:</p>
+            <pre><code data-trim contenteditable>
+#!/bin/sh
+mv -f &lt;path&gt;/forecast.json &lt;path&gt;/forecast.json.bak
+curl -s http://api.wunderground.com/api/&lt;WeatherUndergroundID&gt;/forecast/geolookup/
+  conditions/q/IA/Iowa_City.json?pws=0 -o "&lt;path&gt;/forecast.json"
+            </code></pre>
+          </section>
+          <section>
+            <h3>Weather Forecast</h3>
+            <p>Create a cronjob to run the <em>forecast.sh</em> script on a schedule:</p>
+            <pre><code data-trim contenteditable>
+MAILTO="email@domain.edu"
+*/3 * * * * root &lt;path&gt;/forecast.sh &gt;/dev/null 2&gt;&1
+            </code></pre>
+          </section>
+          <section>
+            <h3>Weather Forecast</h3>
+            <p>Tell the JavaScript to read from the local <em>forecast.json</em> file:</p>
+            <pre><code data-trim contenteditable>
+function displayWeather() {
+   $.ajax({
+      cache : false,
+      type : 'GET',
+      url : '&lt;path&gt;/forecast.json',
+      dataType : 'json',
+      error : function() {
+         // Error handling
+      },
+      success : function(parsed_json) {
+        // Do something here
+      }
+   });
+}
+            </code></pre>
+          </section>
+          <section>
+            <h3>News and Events</h3>
+            <p>Feeds module used to pull news from department websites</p>
+            <p>Pulls events from the University Localist Event system</p>
+            <p>Automatic removal of outdated news and events</p>
+          </section>
+          <section>
+            <h3>BONGO (Bus On The Go)</h3>
+            <p><img class="sign" src="img/digital_signage_bongo.jpg" alt="Example of the BONGO (Bus On The Go) system on the digital signage"></p>
+          </section>
+          <section>
+            <h3>Earthquake Data Map</h3>
+            <p><img class="sign" src="img/digital_signage_earthquake.jpg" alt="Example of the USGS Earthquake Data Map on the digital signage"></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>What we came up with...</h2>
+            <p>Hawk Alert (Emergency Notification System)</p>
+          </section>
+          <section>
+            <h3>Hawk Alert</h3>
+            <p>Create a shell script (<em>hawkalert.sh</em>) to pull the Hawk Alert CAP Feed and create a local <em>hawkalert.xml</em> file:</p>
+            <pre><code data-trim contenteditable>
+#!/bin/sh
+mv -f &lt;path&gt;/hawkalert.xml &lt;path&gt;/hawkalert.xml.bak
+curl -s http://emergency.uiowa.edu/hawk-alert-CAP -o "&lt;path&gt;/hawkalert.xml"
+            </code></pre>
+
+            <pre><code data-trim contenteditable>
+<alert xmlns="urn:oasis:names:tc:emergency:cap:1.2">
+</alert>
+            </code></pre>
+          </section>
+          <section>
+            <h3>Hawk Alert</h3>
+            <p>Create a cronjob to run the <em>hawkalert.sh</em> script on a schedule:</p>
+            <pre><code data-trim contenteditable>
+MAILTO="email@domain.edu"
+*/5 * * * * root &lt;path&gt;/hawkalert.sh &gt;/dev/null 2&gt;&1
+            </code></pre>
+          </section>
+          <section>
+            <h3>Hawk Alert</h3>
+            <p>Tell the JavaScript to read from the local <em>hawkalert.xml</em> file:</p>
+            <pre><code data-trim contenteditable>
+function displayHawkAlert() {
+   $.ajax({
+      cache : false,
+      type : 'GET',
+      url : '&lt;path&gt;/hawkalert.xml',
+      dataType : 'xml',
+      error : function() {
+         // Error handling
+      },
+      success : function(xml) {
+         if( message has children ) {
+            // Do something here
+         }
+         else {
+            // Resume normal content
+         }
+      }
+   });
+}
+            </code></pre>
+          </section>
+          <section>
+            <p><img class="sign" src="img/digital_signage_hawkalert.jpg" alt="Example of a Hawk Alert warning in progress on the digital signage"></p>
+            <p><a href="http://emergency.uiowa.edu" target="_blank">e.uiowa.edu</a></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>What we came up with...</h2>
+            <p>Easy-to-use User Interface</p>
+          </section>
+          <section>
+            <h3>Panels In-Place Editor</h3>
+            <small>The Panels IPE allows Content Managers to see changes as they make them.</small>
+            <p><img class="sign" src="img/digital_signage_ipe.jpg" alt="Example of the Panels In-Place Editor allowing Content Managers to add, remove, and move widgets around the digital sign"></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>What we came up with...</h2>
+            <p>"Media Player" Setups</p>
+          </section>
+          <section>
+            <img src="img/windows7_logo.png" alt="Microsoft Windows 7 logo">
+            <h3>Original "Media Player"</h3>
+            <p>Dell Optiplex 3020 Micro PC or similar device</p>
+            <p>CLAS IT Standard Plus Image (SCCM) 32-bit Windows 7 Enterprise</p>
+            <p>System updates received monthly via SCCM</p>
+            <p>IE9 with Kiosk Mode feature enabled</p>
+            <p>Group Page launched automatically on boot</p>
+            <p>LanSchool Classroom Management software - <a href="http://lanschool.com" target="_blank">lanschool.com</a></p>
+            <p>Basic build cost = ~$400</p>
+          </section>
+          <section>
+            <img src="img/raspberrypi_logo.png" alt="Raspberry Pi logo">
+            <h3>Raspberry Pi</h3>
+            <p>Raspbian OS Image</p>
+            <p>Chromium with Kiosk and Incognito modes enabled</p>
+            <p>Group Page launched automatically on boot</p>
+            <p>Preconfigured setup available on additional SD cards</p>
+            <p>Powered via Micro-USB cable connected to display</p>
+            <p>Raspberry Pi 2 Complete Starter Kit (Amazon) = $70-80</p>
+            <p><a href="http://www.raspberrypi.org/" target="_blank">raspberrypi.org</a></p>
+          </section>
+          <section>
+            <img src="img/intel_logo.png" alt="Intel Compute Stick">
+            <h3>Intel Compute Stick</h3>
+            <p>New SCCM Image 32-bit Windows 8.1 Enterprise</p>
+            <p>Google Chrome with Kiosk and Incognito modes enabled</p>
+            <p>Connects directly to HDMI port on back of display</p>
+            <p>Wireless, Bluetooth, USB 2.0, and MicroSD connections</p>
+            <p>Powered via AC power adapter (included)</p>
+            <p>TigerVNC - <a href="http://tigervnc.org" target="_blank">tigervnc.org</a> / Apple Remote Desktop - <a href="http://www.apple.com/remotedesktop/" target="_blank">ARD</a></p>
+            <p>* Intel Compute Stick (Amazon) = $130</p>
+          </section>
+          <section>
+            <h3>Intel Compute Stick</h3>
+            <img src="img/intel_stick.png" alt="Intel Compute Stick">
+            <p><a href="http://intel.ly/1xCN0C4" target="_blank">http://intel.ly/1xCN0C4</a></p>
+          </section>
+          <section>
+            <h3>LanSchool</h3>
+            <p><small>Allows us to remotely monitor each display and restart if necessary - <a href="http://lanschool.com">http://lanschool.com</a></small></p>
+            <p><img src="img/lanschool_2015.jpg" alt="Example of the LanSchool Classroom Management Software in action"></p>
+          </section>
+          <section>
+            <h3>TigerVNC + Apple Remote Desktop</h3>
+            <p><small>Allows us to remotely monitor each display / force restart with no additional cost to clients<br>
+            <a href="http://tigervnc.org" target="_blank">TigerVNC</a> - <a href="http://www.apple.com/remotedesktop/" target="_blank">Apple Remote Desktop</a></small></p>
+            <p><img src="img/apple_remote_desktop.jpg" alt="Example of the Apple Remote Desktop software in action"></p>
+          </section>
+        </section>
+
+        <section>
+          <section data-autoslide="3000">
+            <h2>Where it's worked...</h2>
+            <p>Academic Programs and Student Development<br>
+            <span class="fragment" data-fragment-index="5" data-autoslide="1000">Anthropology, </span>
+            <span class="fragment" data-fragment-index="6" data-autoslide="0">Biology, </span>
+            <span class="fragment" data-fragment-index="3" data-autoslide="1000">Chemistry,<br></span>
+            <span class="fragment" data-fragment-index="5" data-autoslide="1000">Computer Science, </span>
+            <span class="fragment" data-fragment-index="4" data-autoslide="1000">Dance, </span>
+            <span class="fragment" data-fragment-index="4" data-autoslide="1000">English,<br></span>
+            <span class="fragment" data-fragment-index="6" data-autoslide="0">Geographical and Sustainability Sciences,<br></span>
+            <span class="fragment" data-fragment-index="2" data-autoslide="1000">Health and Human Physiology,<br></span>
+            <span class="fragment" data-fragment-index="6" data-autoslide="0">Iowa Advanced Technology Labs,<br></span>
+            <span class="fragment" data-fragment-index="3" data-autoslide="1000">Journalism and Mass Communication,<br></span>
+            <span class="fragment" data-fragment-index="5" data-autoslide="1000">Mathematics, </span>
+            <span class="fragment" data-fragment-index="2" data-autoslide="1000">Physics and Astronomy,<br></span>
+            <span class="fragment" data-fragment-index="3" data-autoslide="1000">Religious Studies, </span>
+            <span class="fragment" data-fragment-index="1" data-autoslide="1000">Social Work, </span>
+            <span class="fragment" data-fragment-index="4" data-autoslide="1000">Theatre Arts,<br></span>
+            <span class="fragment" data-fragment-index="2" data-autoslide="1000">World Languages, Literatures and Cultures</span></p>
+          </section>
+          <section>
+            <h3>...then others wanted it...</h3>
+            <p>Information Technology Services</p>
+            <p>University Admissions</p>
+            <p>University Athletics</p>
+            <p>Housing and Dining</p>
+            <p>Graduate College</p>
+            <p>College of Engineering</p>
+            <p>College of Medicine</p>
+            <p>Main Library and Learning Commons</p>
+          </section>
+          <section>
+            <h3>...and the word spread</h3>
+            <p>Penn State University</p>
+            <p>Stanford University</p>
+            <p>Georgia Tech University</p>
+          </section>
+        </section>
+
+        <section>
+          <h2>Live Demo Time!</h2>
+          <p><a href="http://clas.uiowa.edu/signage/" target="_blank">CLAS Drupal Digital Signage Solution</a></p>
+        </section>
+
+        <section>
+          <section>
+            <h2>What are we doing now?</h2>
+            <p>Creating a University wide Digital Signage solution with Central IT</p>
+            <p>New slideshow functionality to improve sharing of content</p>
+            <p>Mapping / Wayfinding</p>
+            <p>White Pages / Directory Listing</p>
+          </section>
+          <section>
+            <h3>Sharing our solution</h3>
+            <p>When we finish the new solution, we plan to share it with others</p>
+            <p>Can collaboration with others to make the project even better?</p>
+          </section>
+        </section>
+
+        <section>
+          <h2>Acknowledgements</h2>
+          <p>Ben Speare (CLAS Web Services)</p>
+          <p>Lance Bolton, Rick Bennett (CLAS IT)</p>
+          <p>Isaac Podolefsky, Mike Hendrickson (CLAS IT)</p>
+          <p>Bob Irwin, Kelvin Lehrman (CLAS IT)</p>
+          <p>Andy Jenkins (Graduate College)</p>
+          <p>Josh Kaine (University Creative Services)</p>
+        </section>
+
+        <section>
+          <h2>Questions?</h2>
+        </section>
+
+        <section>
+          <h2>Contact Us</h2>
+          <p><a href="mailto:mark-bennett@uiowa.edu">mark-bennett@uiowa.edu</a> --- <a href="mailto:mark-fullenkamp@uiowa.edu">mark-fullenkamp@uiowa.edu</a></p>
+          <p><a href="mailto:clas-web-services@uiowa.edu">clas-web-services@uiowa.edu</a></p>
+        </section>
+
+        <section>
+          <h2>Thank You!</h2>
+          <p>Please remember to give us any and all feedback!</p>
+          <a href="http://2015.highedweb.org/"><h3>AIM9</h3></a>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
